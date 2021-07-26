@@ -1,0 +1,38 @@
+html,body{
+    text-align: center;
+    background: linear-gradient(to right, #592626, #0f0080) no-repeat;
+    padding: 1%;
+}
+.title{
+    color:crimson;
+}
+.year{
+    color: green;
+}
+.genero{
+    color: teal;
+}
+.titulo{
+    text-align:center;
+    color: rgb(95, 255, 247);
+}
+.ING{
+    width: 50%;
+    height: 20px;
+    text-align: center;
+    color: #0f0080;
+}
+input[type=submit]{
+    background-color:chartreuse;
+    border-color: blueviolet;
+    cursor:pointer;
+    color: blue;
+    border-radius: 20%;
+}
+.imgP{
+    border-radius: 50%;
+    width: 80%;
+}
+.error{
+    color: aliceblue;
+}

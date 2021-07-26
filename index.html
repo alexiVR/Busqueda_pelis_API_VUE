@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peliculas Vue 3 Api</title>
+    <meta name="description" content="Esta app muestra la busqueda de puliculas mendiante api">
+    <!-- Metadata para PWA -->
+    <!-- Modificar color barra de estado ANDROID -->
+    <meta name="theme-color" content="#41b883" />
+    <!-- Optimizaciones de SEO -->
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <!-- Modificar Barra de estado IOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <script src="https://unpkg.com/vue@next"></script>
+
+
+    <!--Manifest-->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Iconos -->
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="./img/favicon.png" />
+    <link rel="apple-touch-startup-image" href="./img/favicon.png" />
+
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div id="app">
+        <h1 class="titulo">{{title}}</h1>
+        <hr>
+        <form @submit.prevent="getMovie"> 
+            <label>
+                <input type="text" v-model.trin="movieTitle" class="ING">
+            </label>
+            <br>
+            <br>
+            <input type="submit" value="Get movie">
+        </form>
+        <hr>
+        <div class="container">
+            <h3>Movie: <span class="title">{{movieData.Title}}</span> </h3>
+            <h4>Año: <span class="year">{{movieData.Year}}</span></h4>
+            <h4>Genero: <strong class="genero">{{movieData.Genre}}</strong></h4>
+            <h5>Actores: {{movieData.Actors}}</h5>
+
+            <img :src="movieData.Poster" alt="movieData.imdbID" class="imgP">
+        </div>
+       
+    </div>
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+</html>
